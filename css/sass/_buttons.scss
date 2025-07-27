@@ -1,0 +1,15 @@
+@use './colors';
+@use './layout';
+@use './spacing';
+@use './typography';
+
+a{
+    @include typography.typeface-2(p2, desktop);
+    text-decoration: none;
+    color: colors.$primary-normal;
+    transition: .5s ease;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
