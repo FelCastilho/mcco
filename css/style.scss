@@ -21,20 +21,6 @@ body{
 
   background-color: colors.$white-normal;
 
-  &::-webkit-scrollbar{
-    padding-right: 4px;
-    width: 20px;
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb{
-    border-radius: 8px;
-
-  }
 }
 
 .border{

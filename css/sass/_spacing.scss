@@ -5,6 +5,10 @@ $gap-3: 48px;
 $gap-4: 72px;
 $gap-5: 128px;
 
+$gap-6: 52px;
+$gap-7: 32px;
+$gap-8: 26px;
+
 .s-0 {
   margin: 0;
   padding: 0;
@@ -40,6 +44,10 @@ $gap-5: 128px;
 }
 .mt-5 {
   margin-top: $gap-5;
+}
+
+.mt-6{
+  margin-top: $gap-8;
 }
 
 .ml-1 {
@@ -130,6 +138,11 @@ $gap-5: 128px;
 .my-5 {
   margin-top: $gap-5;
   margin-bottom: $gap-5;
+}
+
+.my-6 {
+  margin-top: $gap-8;
+  margin-bottom: $gap-8;
 }
 
 .p-1 {
