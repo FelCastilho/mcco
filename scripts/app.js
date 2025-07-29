@@ -35,3 +35,32 @@ const showMenu = (toggleId, navId) => {
 }
 
 showMenu("bx", "menu-mobile");
+
+// SLIDE 
+
+const bullet = document.querySelectorAll(".bullet");
+const images = document.querySelectorAll(".img-slider");
+
+bullet.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        // Zera opacidade e z-index de todas as imagens
+        images[0].style.opacity = "0";
+        images[1].style.opacity = "0";
+        images[2].style.opacity = "0";
+
+        images[0].classList.remove("active-img");
+        images[1].classList.remove("active-img");
+        images[2].classList.remove("active-img");
+
+        // Ativa imagem certa
+        images[index].style.opacity = "1";
+        images[index].classList.add("active-img");
+
+        // Atualiza bullets
+        bullet[0].classList.remove("active-bullet");
+        bullet[1].classList.remove("active-bullet");
+        bullet[2].classList.remove("active-bullet");
+
+        bullet[index].classList.add("active-bullet");
+    });
+});

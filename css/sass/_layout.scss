@@ -158,23 +158,69 @@ $container-s: 540px;
 
   display: flex;
   justify-content: center;
-
 }
 
-.overlay {
-  background-image: url('../../svg/img-hero.svg');
-  background-size: cover;
+.bg-slider {
+  overflow: hidden;
   z-index: -1;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
 
-  &::before {
-    content: "";
+  transition: all 0.5s ease-in-out;
+
+  .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); // escurecimento
+    z-index: 2;
+    pointer-events: none;
   }
 
+  img {
+    position: absolute;
+
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.img-slider.active-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+.bullets-container {
+  position: absolute;
+  bottom: 8%;
+}
+
+.bullets-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: spacing.$gap-8;
+}
+
+.bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: colors.$white-normal;
+  cursor: pointer;
+}
+
+.active-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: colors.$secondary-normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }

@@ -167,7 +167,7 @@ h5 {
 }
 
 .p1 {
-  color: colors.$gray-4;
+  color: colors.$white-normal;
   @include typeface-2(p1, desktop);
 
   @include layout.responsive(s) {
