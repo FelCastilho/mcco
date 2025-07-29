@@ -159,6 +159,8 @@ header {
 
 .dropdown-menu {
     width: 400px;
+    background-color: colors.$white-normal;
+    border-radius: 8px;
 
     list-style: none;
 
@@ -189,6 +191,7 @@ header {
 
 .nav-link-dropdown {
     display: inline-block;
+    color: colors.$primary-normal;
 
     width: 100%;
     padding: 8px 16px;
@@ -387,3 +390,4 @@ header {
         }
     }
 }
+

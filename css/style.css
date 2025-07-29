@@ -447,6 +447,7 @@
 }
 
 .hero {
+  position: relative;
   height: 100vh;
   z-index: 1;
   display: flex;
@@ -524,8 +525,8 @@
 @media screen and (max-width: 960px) {
   .h0 {
     font-family: "Poppins", sans-serif;
-    font-size: 36px;
-    line-height: 100%;
+    font-size: 42px;
+    line-height: 120%;
     font-weight: 600;
   }
 }
@@ -794,6 +795,8 @@ header {
 
 .dropdown-menu {
   width: 400px;
+  background-color: #F9FAFF;
+  border-radius: 8px;
   list-style: none;
   padding: 16px 24px;
   position: absolute;
@@ -818,6 +821,7 @@ header {
 
 .nav-link-dropdown {
   display: inline-block;
+  color: #05135E;
   width: 100%;
   padding: 8px 16px;
   position: relative;
@@ -975,11 +979,89 @@ a {
   font-size: 18px;
   line-height: 140%;
   text-decoration: none;
-  color: #05135E;
+  color: #F9FAFF;
   transition: 0.5s ease;
 }
 a:hover {
   opacity: 0.8;
+}
+
+.button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #F9FAFF;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #F9FAFF;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #F9FAFF;
+  z-index: -1;
+}
+
+.button:hover,
+.button:focus {
+  color: transparent;
+}
+
+.button:hover:before,
+.button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.container-return-top {
+  position: relative;
+}
+
+.return-top {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 7%;
+  right: calc((100vw - 1440px) / 2);
+  z-index: 1000;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.return-top svg {
+  width: 18px;
+  height: 18px;
+  transform: rotate(-90deg);
+}
+
+.return-top.show {
+  display: flex;
 }
 
 * {
