@@ -144,6 +144,12 @@ $container-s: 540px;
   overflow: hidden;
 }
 
+@media screen and (max-width: 960px) {
+  .disappear {
+    display: none;
+  }
+}
+
 //////////////////////////////////////
 //////////////////////////////////////
 //////////////////////////////////////
@@ -152,9 +158,12 @@ $container-s: 540px;
 //////////////////////////////////////
 //////////////////////////////////////
 
+
+// HERO SECTION
+
 .hero {
   position: relative;
-  
+
   height: 100vh;
   z-index: 1;
 
@@ -225,4 +234,104 @@ $container-s: 540px;
   background-color: colors.$secondary-normal;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+// SERVICES SECTION
+
+.services {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid blue;
+}
+
+.grid-services {
+  display: grid;
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, minmax(256px, auto));
+
+  grid-template-areas:
+    "a a b b c c"
+    "d d d e e e"
+  ;
+}
+
+.construcao-civil {
+  grid-area: a;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(../../img/construcao-civil.jpg);
+
+  color: white;
+}
+
+.pintura-predial {
+  grid-area: b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(../../img/pintura-predial.jpg);
+}
+
+.terraplanagem {
+  grid-area: c;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(../../img/terraplanagem.jpg);
+}
+
+.concreto-armado {
+  grid-area: d;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(../../img/concreto-armado.jpg);
+}
+
+.estruturas-metalicas {
+  grid-area: e;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(../../img/estruturas-metalicas.jpg);
+}
+
+.service-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+      padding: 24px 24px;
+
+  .arrow-services {
+  
+    align-self: flex-end;
+    justify-self: flex-start;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  h3 {
+    align-self: flex-start;
+    color: colors.$white-normal;
+    font-weight: 500;
+  }
 }

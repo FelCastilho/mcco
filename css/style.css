@@ -92,6 +92,10 @@
   margin-top: 26px;
 }
 
+.mt-7 {
+  margin-top: 42px;
+}
+
 .ml-1 {
   margin-left: 8px;
 }
@@ -307,6 +311,10 @@
   padding-bottom: 128px;
 }
 
+.pb-8 {
+  padding-bottom: 26px;
+}
+
 .px-1 {
   padding-left: 8px;
   padding-right: 8px;
@@ -446,6 +454,11 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 960px) {
+  .disappear {
+    display: none;
+  }
+}
 .hero {
   position: relative;
   height: 100vh;
@@ -514,6 +527,85 @@
   transition: all 0.3s ease;
 }
 
+.services {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid blue;
+}
+
+.grid-services {
+  display: grid;
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, minmax(256px, auto));
+  grid-template-areas: "a a b b c c" "d d d e e e";
+}
+
+.construcao-civil {
+  grid-area: a;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/construcao-civil.jpg);
+  color: white;
+}
+
+.pintura-predial {
+  grid-area: b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/pintura-predial.jpg);
+}
+
+.terraplanagem {
+  grid-area: c;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/terraplanagem.jpg);
+}
+
+.concreto-armado {
+  grid-area: d;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/concreto-armado.jpg);
+}
+
+.estruturas-metalicas {
+  grid-area: e;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/estruturas-metalicas.jpg);
+}
+
+.service-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 24px 24px;
+}
+.service-img .arrow-services {
+  align-self: flex-end;
+  justify-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.service-img .arrow-services svg {
+  width: 16px;
+  height: 16px;
+}
+.service-img h3 {
+  align-self: flex-start;
+  color: #F9FAFF;
+  font-weight: 500;
+}
+
 .h0 {
   color: black;
   font-family: "Poppins", sans-serif;
@@ -560,7 +652,7 @@ h2 {
 }
 
 h3 {
-  color: #F9FAFF;
+  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   line-height: 130%;
@@ -589,11 +681,9 @@ h4 {
 
 h5 {
   text-transform: uppercase;
-  letter-spacing: 28%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #000;
+  margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 150%;
@@ -615,8 +705,8 @@ h5 {
 @media screen and (max-width: 960px) {
   .p1 {
     font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 150%;
   }
 }
 
@@ -666,6 +756,19 @@ strong {
   font-weight: 500;
 }
 
+.title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+}
+
+.arrow-title {
+  width: 14px;
+  height: 14px;
+  fill: #d79600;
+}
+
 header {
   width: 100%;
   height: 10vh;
@@ -695,6 +798,8 @@ header {
 @media screen and (max-width: 960px) {
   .active-header {
     width: 100%;
+    margin-top: 0;
+    border-radius: 0px;
   }
 }
 
@@ -878,7 +983,7 @@ header {
   top: 40%;
   left: 17%;
   width: 70%;
-  height: 3px;
+  height: 2px;
   transition: 0.3s ease;
   background-color: #F9FAFF;
 }
@@ -927,9 +1032,10 @@ header {
   width: 100%;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -942,6 +1048,7 @@ header {
 .active-menu-mobile {
   opacity: 1;
   pointer-events: all;
+  background-color: #F9FAFF;
 }
 
 .nav-list-mobile {
@@ -953,10 +1060,10 @@ header {
 
 .nav-link-mobile {
   display: inline-block;
+  color: #05135E;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   line-height: 130%;
-  color: #F9FAFF;
   padding: 16px 24px;
   position: relative;
 }
@@ -987,51 +1094,22 @@ a:hover {
 }
 
 .button {
-  font-size: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  font-weight: bold;
   padding: 0.7em 2em;
   border: 3px solid #F9FAFF;
   border-radius: 2px;
   position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   color: #F9FAFF;
   text-decoration: none;
-  transition: 0.3s ease all;
+  transition: 0.5s ease all;
   z-index: 1;
 }
-
-.button:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: #F9FAFF;
-  z-index: -1;
-}
-
-.button:hover,
-.button:focus {
-  color: transparent;
-}
-
-.button:hover:before,
-.button:focus:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-
-.button:active {
-  transform: scale(0.9);
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .container-return-top {
@@ -1070,6 +1148,31 @@ a:hover {
   box-sizing: border-box;
 }
 
+.cursor-ball {
+  position: fixed;
+  top: -0.5%;
+  left: -0.5%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+}
+.cursor-ball::after {
+  position: fixed;
+  content: "";
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1099,6 +1202,7 @@ body {
   position: relative;
 }
 
-svg, img {
+svg,
+img {
   width: 100%;
 }/*# sourceMappingURL=style.css.map */

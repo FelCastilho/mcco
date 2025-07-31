@@ -1,3 +1,11 @@
+//MOUSE FOLLOWER
+
+const ball = document.querySelector('.cursor-ball');
+
+document.addEventListener('mousemove', (e) => {
+  ball.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
 // SCROLL HEADER
 function scrollHeader() {
   const nav = document.getElementById("header");
@@ -84,3 +92,5 @@ returnTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+
