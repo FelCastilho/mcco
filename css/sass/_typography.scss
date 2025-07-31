@@ -27,7 +27,7 @@
 
   @else if $size ==h1 and $device ==mobile {
     font-size: 32px;
-    line-height: 100%;
+    line-height: 130%;
   }
 
   @else if $size ==h2 and $device ==desktop {

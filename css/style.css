@@ -544,6 +544,12 @@
   grid-template-rows: repeat(2, minmax(256px, auto));
   grid-template-areas: "a a b b c c" "d d d e e e";
 }
+@media screen and (max-width: 960px) {
+  .grid-services {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d" "e";
+  }
+}
 
 .construcao-civil {
   grid-area: a;
@@ -576,11 +582,17 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding: 24px 24px;
+  border-radius: 12px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 24px 24px;
+}
+@media screen and (max-width: 960px) {
+  .service-img {
+    height: 256px;
+  }
 }
 .service-img .arrow-services {
   align-self: flex-end;
@@ -633,7 +645,7 @@ h1 {
   h1 {
     font-family: "Poppins", sans-serif;
     font-size: 32px;
-    line-height: 100%;
+    line-height: 130%;
   }
 }
 
