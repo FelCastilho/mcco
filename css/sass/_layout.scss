@@ -244,7 +244,6 @@ $container-s: 540px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid blue;
 }
 
 .grid-services {
@@ -262,7 +261,7 @@ $container-s: 540px;
   ;
 
   @include responsive(s) {
-    grid-template-columns: 1fr; // 👈 agora só uma coluna
+    grid-template-columns: 1fr;
     grid-template-areas:
       "a"
       "b"
@@ -302,8 +301,9 @@ $container-s: 540px;
   grid-area: e;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
     url(../../img/estruturas-metalicas.jpg);
-}
 
+  transition: .5s ease;
+}
 .service-img {
   display: flex;
   flex-direction: column;
@@ -319,7 +319,9 @@ $container-s: 540px;
 
   position: relative;
 
-  @include responsive(s){
+  cursor: pointer;
+
+  @include responsive(s) {
     height: 256px;
   }
 
@@ -340,6 +342,8 @@ $container-s: 540px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    transform: rotate(-45deg);
 
     svg {
       width: 16px;

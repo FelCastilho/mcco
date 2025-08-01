@@ -93,4 +93,21 @@ returnTopBtn.addEventListener("click", () => {
   });
 });
 
+// ROTATE ARROW HOVER
+
+const serviceItems = document.querySelectorAll(".service-img");
+
+serviceItems.forEach((item) => {
+  const arrow = item.querySelector(".arrow-services");
+
+  item.addEventListener("mouseenter", () => {
+    arrow.style.transition = "transform 0.3s ease";
+    arrow.style.transform = "rotate(-45deg)";
+  });
+
+  item.addEventListener("mouseleave", () => {
+    arrow.style.transition = "transform 0.3s ease";
+    arrow.style.transform = "rotate(0deg)";
+  });
+});
 

@@ -22,7 +22,7 @@
 
   @else if $size ==h1 and $device ==desktop {
     font-size: 36px;
-    line-height: 100%;
+    line-height: 130%;
   }
 
   @else if $size ==h1 and $device ==mobile {
@@ -117,6 +117,7 @@
 
 h1 {
   color: black;
+  font-weight: 600;
   @include typeface-1(h1, desktop);
 
   @include layout.responsive(s) {
