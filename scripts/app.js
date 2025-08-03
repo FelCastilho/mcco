@@ -99,15 +99,19 @@ const serviceItems = document.querySelectorAll(".service-img");
 
 serviceItems.forEach((item) => {
   const arrow = item.querySelector(".arrow-services");
+  const title = item.querySelector("h3");
 
   item.addEventListener("mouseenter", () => {
     arrow.style.transition = "transform 0.3s ease";
     arrow.style.transform = "rotate(-45deg)";
+
+    title.classList.add("hovered");
   });
 
   item.addEventListener("mouseleave", () => {
     arrow.style.transition = "transform 0.3s ease";
     arrow.style.transform = "rotate(0deg)";
+
+    title.classList.remove("hovered");
   });
 });
-

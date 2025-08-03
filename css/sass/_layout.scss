@@ -426,24 +426,29 @@ $container-s: 540px;
   z-index: 0;
 
 }
-
 // STEPS SECTION
 
 .steps {
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @include responsive(s) {
+    height: 100%;
+  }
 }
 
 .steps-itens {
   display: flex;
   gap: 32px;
   margin-top: 64px;
-
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include responsive(s) {
+    flex-direction: column;
+  }
 }
 
 .step {
@@ -458,8 +463,25 @@ $container-s: 540px;
   flex-direction: column;
   align-items: flex-start;
 
+  border-radius: 0;
+
   .number-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    background-color: colors.$primary-normal;
+    border-radius: 6px;
     margin-bottom: 16px;
+
+    .number-steps {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
   }
 
   h4 {
@@ -470,39 +492,27 @@ $container-s: 540px;
     font-size: 14px;
     line-height: 1.6;
   }
+
+  @include responsive(s) {
+    width: 100%;
+  }
 }
-
-#fourth-step{
+.step.highlight-step {
   background-color: colors.$primary-normal;
-
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
 
-  .fourth-step-p, 
-  .fourth-step-title, 
-  .fourth-step-number{
-  color: white;
+  h4,
+  .steps-text {
+    color: white;
   }
 
-}
-
-.number-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 32px;
-
-  background-color: colors.$primary-normal;
-  border-radius: 6px;
-
-  margin-bottom: 16px;
-}
-
-.number-steps {
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0;
+  .number-container {
+    background-color: white;
+    font-weight: 600;
+    .number-steps {
+      color: colors.$primary-normal;
+      font-weight: 700;
+    }
+  }
 }

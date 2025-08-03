@@ -223,3 +223,23 @@ strong {
   height: 14px;
   fill: #d79600;
 }
+
+.services-title-active {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    transition: 0.5s ease;
+    width: 0%;
+    height: 2px;
+    background-color: colors.$white-normal;
+  }
+
+  &.hovered::after {
+    width: 100%;
+  }
+}
