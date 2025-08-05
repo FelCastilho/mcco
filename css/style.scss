@@ -4,6 +4,7 @@
 @use './sass/typography';
 @use './sass/menu';
 @use './sass/buttons';
+@use './sass/footer';
 
 * {
   padding: 0;
@@ -80,3 +81,7 @@ img {
   //height: auto;
 }
 */
+
+ul{
+  list-style: none;
+}

@@ -516,3 +516,22 @@ $container-s: 540px;
     }
   }
 }
+
+// CTA SECTION
+.cta {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include responsive(s) {
+    height: auto;
+    padding: 32px 18px;
+  }
+}
+
+.cta-container{
+  max-width: 1140px;
+  display: flex;
+  align-items: center;
+}
